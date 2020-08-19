@@ -1,0 +1,24 @@
+.footer{
+    width: 860px;
+    display: flex;
+    justify-content: space-between;
+}
+.block_foot {
+    width: 200px;
+    height: 122px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 23px #000000;
+    border-radius: 18px 18px 0px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    cursor: pointer;
+    user-select: none;
+}
+.block_foot:nth-child(2){
+    width: 300px;
+}
+.block_foot:nth-child(3){
+    width: 300px;
+}
