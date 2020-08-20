@@ -72,7 +72,7 @@
     }
     .block_gr img {
         width: 300px;
-        height: 300px;
+        height: 340px;
     }
     .block_cont h1 {
         font-size: 50px;
@@ -88,7 +88,7 @@
     }
     .wrap_block_cont img {
         width: 200px;
-        height: 200px;
+        height: 230px;
     }
     .wrap_block_cont h2 {
         font-size: 50px;
@@ -103,7 +103,7 @@
         width: 100%;
     }
     .wrap_block_cont img {
-        width: 180px;
-        height: 180px;
+        width: 160px;
+        height: 160px;
     }
 }

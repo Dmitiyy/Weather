@@ -73,6 +73,11 @@ const toServKr = (col, serv, rec, err) => {
     base(col, serv, 'Kryvyi%20Rih', err);
 }
 
+const toServInput = (col, serv, rec, err, name) => {
+    rec();
+    base(col, serv, name, err);
+}
+
 class View extends React.Component{
     render(){
         const {name, temp, desc} = this.props;
@@ -114,5 +119,5 @@ const mapDispatchToProps = {
     rec
 }
 
-export {toServLondon,toServParis,toServKr};
+export {toServLondon,toServParis,toServKr,toServInput};
 export default connect(mapStateToProps, mapDispatchToProps)(Section);

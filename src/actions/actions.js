@@ -19,4 +19,11 @@ const err = () => {
     }
 }
 
-export {col, rec, err};
+const val = (value) => {
+    return {
+        type:'VAL',
+        payValue: value
+    }
+}
+
+export {col, rec, err, val};

@@ -3,18 +3,23 @@ import Header from './components/header/';
 import './app.css';
 import Section from './components/section/';
 import Footer from './components/footer/';
-import {toServLondon,toServParis,toServKr} from './components/section/section';
+import {toServLondon,toServParis,toServKr,toServInput} from './components/section/section';
 import Serv from './services/';
-import {col, rec, err} from './actions/actions';
+import {col, rec, err, val} from './actions/actions';
 import {connect} from 'react-redux';
+import Input from './components/input/';
 
 const serv = new Serv();
 
-function App({col, rec, err}) {
+function App({col, rec, err, value}) {
   return (
     <>
       <div className="container">
         <Header/>
+        <Input toServInput={(e) => {
+          e.preventDefault();
+          toServInput(col, serv, rec, err, value);
+        }}/>
         <div className="obv">
           <Section/>
           <Footer 
@@ -29,13 +34,16 @@ function App({col, rec, err}) {
 }
 
 const mapStateToProps = (state) => {
-  return {state};
+  return {
+    value:state.value
+  };
 }
 
 const mapDispatchToProps = {
   col,
   rec,
-  err
+  err,
+  val
 }
 
 export default connect(mapStateToProps,mapDispatchToProps)(App);

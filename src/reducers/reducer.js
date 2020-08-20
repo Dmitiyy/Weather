@@ -3,7 +3,8 @@ const initialState = {
     temp: '',
     desc: '',
     loading: true,
-    error: false
+    error: false,
+    value: ''
 };
 
 const reducer = (state = initialState, action) => {
@@ -34,6 +35,13 @@ const reducer = (state = initialState, action) => {
                 ...state,
                 error: true,
                 loading:false
+            }
+
+        case 'VAL':
+            const value = action.payValue;
+            return{
+                ...state,
+                value: value
             }
             
         default:
